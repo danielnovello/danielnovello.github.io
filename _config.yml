@@ -1,13 +1,13 @@
 # Site
 repository: djquazzi/djquazzi.github.io
 favicon: images/favicon.ico
-darkmode: true
 
 # Personal info
 name: Daniel Novello
 title: Senior Network System Administrator
 email: brett.h@email.co.uk
 website: www.github.com/sproogen/resume-theme
+darkmode: true
 
 # Social links
 twitter_username: facespics
