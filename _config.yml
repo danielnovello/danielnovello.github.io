@@ -4,7 +4,7 @@ favicon: images/favicon.ico
 
 # Personal info
 name: Daniel Novello
-title: Senior Network System Administrator
+title: Senior IT Specialist & Apple System Engineer
 email: djquazzi@gmail.com
 website: http://daniel.novello.co.za
 
@@ -24,9 +24,14 @@ linkedin_username: jameswgdaniel-novello-70719917brant
 
 # About Section
 # about_title: About Me
-about_profile_image: images/profile.jpg
+about_profile_image: images/myAvatar.png
 about_content: | # this will include new lines to allow paragraphs
-  A resourceful senior Apple Mac engineer and multi-skilled professional with over a decade and a half of focused information technology industry experience. Used to working at all levels, from single user support through to organisational IT integration and management, working with a vast range of macOS, iOS and some open source devices. Works well with professionals and clients across an organisation, striving to create safe and strong IT environments, regularly creating and communicating changes, and guiding junior staff towards ongoing success. Utilises a large technical skillset alongside expert client liaison capabilities to maintain and continuously improve IT processes, troubleshoot and diagnose issues and tackle problems head-on. Able to coordinate infrastructure strategy, develop comprehensive plans and handle all aspects of installation, testing and support for hardware, software and networks. A self-starter who enjoys driving change and working on own initiative, with a pervasive desire to learn new things, adopting and integrate new technologies, processes and competencies swiftly and seamlessly.
+  A resourceful senior Apple Mac engineer and multi-skilled professional with over a decade and a half of focused information technology industry experience. 
+  Used to working at all levels, from single user support through to organisational IT integration and management, working with a vast range of macOS, iOS and some open source devices. 
+  Works well with professionals and clients across an organisation, striving to create safe and strong IT environments, regularly creating and communicating changes, and guiding junior staff towards ongoing success. 
+  Utilises a large technical skillset alongside expert client liaison capabilities to maintain and continuously improve IT processes, troubleshoot and diagnose issues and tackle problems head-on. 
+  Able to coordinate infrastructure strategy, develop comprehensive plans and handle all aspects of installation, testing and support for hardware, software and networks. 
+  A self-starter who enjoys driving change and working on own initiative, with a pervasive desire to learn new things, adopting and integrate new technologies, processes and competencies swiftly and seamlessly.
 
 # Projects Section
 # projects_title: Projects
