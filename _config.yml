@@ -35,7 +35,7 @@ about_content:
 
 # Projects Section
 projects_title: Competencies
-- layout: left (options: left, right, top, top-right, top-middle)
+- layout: left
   name: Project name
   link: Link to project (eg. https://sproogen.github.io/modern-resume-theme)(optional)
   github: Github page for project (eg. sproogen/modern-resume-theme)(optional)
