@@ -39,15 +39,7 @@ about_content: |
   name: KEY SKILLS
   description: | # this will include new lines to allow paragraphs
     IT | Wireless Technology | Client Support | Communication | Leadership | Team Management | Training | Coaching | Management | Product Research 
-- layout: left
-  name: IT SKILLS
-  description: | # this will include new lines to allow paragraphs
-    Apple Systems, Servers & Devices | MDM Solutions | Scripting | Imaging | Routing | Deployment | Patch Management | Automation | LAN Switching | Infrastructure Services | Infrastructure Maintenance | Linux | Cisco | Mikrotik | Web Development | HTML | PHP | MySQL | Bash | Python
-- layout: left
-  name: LANGUAGES
-  description: | # this will include new lines to allow paragraphs
-    English | Afrikaans
-
+    
 # Experience Section
 experience_title: Career Summary
 
