@@ -37,12 +37,19 @@ about_content: | # this will include new lines to allow paragraphs
 # projects_title: Projects
 
 # Experience Section
-# experience_title: Experience
+experience_title: Experience
+- layout: left
+  company: Digicape
+  link: http://digicape.co.za
+  job_title: Senior Mac Administrator & Technician
+  dates: November 2007 - present)
+  quote: >
+   Short description of the company (optional)
+  description: | # this will include new lines to allow paragraphs
+    Description of role
 
 # Education Section
-educaton_title: Education
-
-Senior Mac Administrator & Technician
+# educaton_title: Education
 
 # More Section
 # more_title: A Little More About Me
