@@ -35,15 +35,15 @@ about_content:
 
 # Projects Section
 projects_title: Competencies
-- layout: top
+  layout: top
   name: KEY SKILLS
   description: 
     IT | Wireless Technology | Client Support | Communication | Leadership | Team Management | Training | Coaching | Management | Product Research
-- layout: top
+  layout: top
   name: IT SKILLS
   description: 
     Apple Systems, Servers & Devices | MDM Solutions | Scripting | Imaging | Routing | Deployment | Patch Management | Automation | LAN Switching | Infrastructure Services | Infrastructure Maintenance | Linux | Cisco | Mikrotik | Web Development | HTML | PHP | MySQL | Bash | Python   
-- layout: top
+  layout: top
   name: LANGUAGES
   description: 
     English | Afrikaans
