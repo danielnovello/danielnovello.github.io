@@ -34,12 +34,8 @@ about_content: |
   A self-starter who enjoys driving change and working on own initiative, with a pervasive desire to learn new things, adopting and integrate new technologies, processes and competencies swiftly and seamlessly.
 
 # Projects Section
-# projects_title: Competencies
-- layout: left
-  name: KEY SKILLS
-  description: | # this will include new lines to allow paragraphs
-    IT | Wireless Technology | Client Support | Communication | Leadership | Team Management | Training | Coaching | Management | Product Research 
-    
+projects_title: Competencies
+
 # Experience Section
 experience_title: Career Summary
 
