@@ -35,18 +35,14 @@ about_content:
 
 # Projects Section
 projects_title: Competencies
-- layout: top
-  name: KEY SKILLS
-  description: 
-    test1
-- layout: top
-  name: IT SKILLS
-  description: 
-    test2
-- layout: top
-  name: LANGUAGES
-  description: 
-    test3
+- layout: left (options: left, right, top, top-right, top-middle)
+  name: Project name
+  link: Link to project (eg. https://sproogen.github.io/modern-resume-theme)(optional)
+  github: Github page for project (eg. sproogen/modern-resume-theme)(optional)
+  quote: >
+    Short overview of the project (optional)
+  description: | # this will include new lines to allow paragraphs
+    Description about the work on/with the project
 
 # Experience Section
 experience_title: Career Summary
