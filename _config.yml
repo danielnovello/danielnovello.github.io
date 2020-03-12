@@ -38,7 +38,7 @@ about_content: | # this will include new lines to allow paragraphs
 
 # Experience Section
 experience_title: Experience
-- layout: left
+  layout: left
   company: Digicape
   link: http://digicape.co.za
   job_title: Senior Mac Administrator & Technician
