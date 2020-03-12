@@ -1,5 +1,5 @@
 # Site
-repository: "djquazzi/djquazzi.github.io"
+repository: djquazzi/djquazzi.github.io
 favicon: images/favicon.ico
 
 # Personal info
@@ -37,16 +37,6 @@ about_content: | # this will include new lines to allow paragraphs
 # projects_title: Projects
 
 # Experience Section
-experience_title: Career Summary
-- layout: left
-  company: Digicape
-  link: http://www.digicape.co.za
-  job_title: Senior Mac Administrator & Technician
-  dates: November 2007 - present
-  quote: >
-   Short description of the company (optional)
-  description: | # this will include new lines to allow paragraphs
-    Description of role
 
 # Education Section
 # educaton_title: Education
