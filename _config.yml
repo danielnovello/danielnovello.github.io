@@ -37,8 +37,7 @@ about_content: | # this will include new lines to allow paragraphs
 projects_title: Competencies
 - layout: top
   name: KEY SKILLS
-  description: | # this will include new lines to allow paragraphs
-test
+  description: test
 
 # Experience Section
 experience_title: Career Summary
