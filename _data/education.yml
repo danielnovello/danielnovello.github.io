@@ -1,10 +1,10 @@
 - layout: left
-  name: Damelin College, Rustenburg, SA
-  dates: 2014 - 2005
-  qualification: Diploma and Certificates
+  name: Harvard University
+  dates: 2010 - 2013
+  qualification: BSc Computer Science
   quote: >
-    A leader in private higher education, Damelin College offers a wide range of innovative and relevant Higher Education as well as Further Education and Training qualifications that rival some of the best universities in the country.  
+    Established in 1636, Harvard is the oldest higher education institution in the United States, and is widely regarded in terms of its influence, reputation, and academic pedigree as a leading university in not just the US but also the world.
   description: | # this will include new lines to allow paragraphs
-  •	Diploma in Fundamentals of Project Management<br>
-  •	Diploma in Systems Engineering<br>
-  •	Certificate in PC Engineering
+      •	Diploma in Fundamentals of Project Management<br>
+      •	Diploma in Systems Engineering<br>
+      •	Certificate in PC Engineering
