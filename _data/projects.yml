@@ -12,3 +12,15 @@
   name: Languages
   description: | # this will include new lines to allow paragraphs
       English • Afrikaans
+      
+- layout: top-middle
+  name: Certifications and Accreditations
+  description: | # this will include new lines to allow paragraphs
+      •	Apple Certified Support Professional 10.14
+      •	Certified Mac OS 10.5 to 10.13 Engineer (ACTC)
+      •	MikroTik Certified Routing Engineer (MTCNA + MTCRE)
+      •	Ubiquiti Broadband Wireless Specialist (UBWS)
+      •	Cisco Certified Entry Networking Technician (CCENT), Valid to 2022
+      •	Jamf 200 Certified Tech
+      •	Certified ZuluDesk Reseller
+     
