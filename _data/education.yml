@@ -1,5 +1,7 @@
 - layout: left
   name: Damelin College, Rustenburg, SA
   dates: 2014 - 2005
-  qualification: Diploma in Fundamentals of Project Management | Diploma in Systems Engineering | Certificate in PC Engineering
   description: | # this will include new lines to allow paragraphs
+  •	Diploma in Fundamentals of Project Management<br>
+  •	Diploma in Systems Engineering<br>
+  •	Certificate in PC Engineering
