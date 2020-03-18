@@ -1,5 +1,5 @@
 - layout: left
-  company: Digicape
+  company: Digicape, Cape Town, South Africa
   link: https://www.digicape.co.za
   job_title: Senior Mac Admin | System Administrator
   dates: November 2007 - Present
@@ -19,3 +19,36 @@
     •	Working with Apache web servers, Cloud solutions and network services<br>
     •	Coaching, upskilling and training junior employees in the correct use and application of a range of technologies
 
+- layout: left
+  company: Gist IT, Cape Town, South Africa
+  link: https://www.gist.co.za
+  job_title: 1st, 2nd and 3rd Line Technician
+  dates: October 2006 - October 2007
+  description: | # this will include new lines to allow paragraphs
+    <b>Key Achievements and Responsibilties</b><br>
+    •	Supported customers on a wide range of issues, covering software and hardware, from single user to workgroups
+
+- layout: left
+  company: Comunica PLC, London, United Kingdom
+  job_title: Network Installation Engineer
+  dates: January 2005 - January 2006
+  description: | # this will include new lines to allow paragraphs
+    <b>Key Achievements and Responsibilties</b><br>
+    •	Installed, dressed and terminated cat 5 and 6 ethernet, and installed fibre optics at Heathrow Terminal 5
+
+- layout: left
+  company: Biscuit Internet, London, United Kingdom
+  job_title: 1st and 2nd Line Technician
+  dates: January 2005 - August 2005
+  description: | # this will include new lines to allow paragraphs
+    <b>Key Achievements and Responsibilties</b><br>
+    •	Provided a high level of over-the-phone support for customer broadband, private IP addressing and analogue internet
+
+- layout: left
+  company: PCWORX, Rustenburg, South Africa
+  link: http://pcworxrtb.co.za
+  job_title: PC Technician
+  dates: January 2002 - January 2004
+  description: | # this will include new lines to allow paragraphs
+    <b>Key Achievements and Responsibilties</b><br>
+    •	Built new PCs; undertook troubleshooting, fault finding and network servicing; and handled occasional sales
