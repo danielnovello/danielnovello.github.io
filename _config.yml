@@ -2,25 +2,18 @@
 repository: djquazzi/djquazzi.github.io
 favicon: images/favicon.ico
 
+darkmode: true
+
 # Personal info
 name: Daniel Novello
 title: Senior IT Specialist & Apple System Engineer
 email: djquazzi@gmail.com
 website: http://daniel.novello.co.za
 
-darkmode: true
-
 # Social links
 twitter_username: dasnizzel
 github_username:  dquazzi
-# dribbble_username: jekyll
-# facebook_username: jekyll
-# flickr_username: jekyll
-#instagram_username: chillwildlife
 linkedin_username: jameswgdaniel-novello-70719917brant
-# pinterest_username: jekyll
-#youtube_username: globalmtb
-# googleplus_username: +jekyll
 
 # About Section
 about_title: Professional Profile
