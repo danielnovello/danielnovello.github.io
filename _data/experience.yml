@@ -1,3 +1,30 @@
+
+- layout: left
+  company: Pagefreezer, BC, Canada
+  link: http://pagefreezer.com
+  job_title: IT Engineer and Infrastucture Engineer
+  dates: 2021 - Present
+  description: | # this will include new lines to allow paragraphs
+    <b>Key Achievements</b><br>
+    •	Established controls for macOS deployment and documentation<br>
+    •	Implemented testing and troubleshooting Apple hardware and software
+    •	Establish on-boarding and off-boarding controls and polices<br><br>
+    <b>Responsibilties</b><br>
+    • Duties include complete ownership and management of IT infrastructure. 
+    • End-user services for hardware and software implementations
+    • On boarding and off boarding implementation and controls. 
+    • Complete management of Apple (and Linux servers as well as some Windows) devices in production as well as in test labs. 
+    • Administration of MDMs and all other device system administration tools (Patch management, configurations and troubleshooting)
+    • Management of SAAS LDAP services with Jumpcloud
+    • Bash scripting for automation in macOS and Linux
+    • Asset Management
+    • Other infrastructure duties include, 
+      Webserver administratrion
+      Support for engineering teams with Linux servers and user devices
+      Virtual infrastructure management
+      Firewall Administration
+      End-point protection (Sophos) deployment and support
+
 - layout: left
   company: Digicape, Cape Town, South Africa
   link: https://www.digicape.co.za
