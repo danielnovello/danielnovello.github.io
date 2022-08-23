@@ -12,8 +12,7 @@
     • Duties include management of IT infrastructure.<br>
     • Administer virtualized Proxmox enviroment<br>
     • Linux (Linux Server) administration - Installation, configuration, automation<br>
-    • AWS administration<br>
-    • Maintain, update and secure web enviroment (Nginx, Tomcat, Loadbalancers, High availabilty, Cloudflare, Backblaze, AWS)<br>
+    • Maintain, update and secure web enviroment (Nginx, Tomcat, Loadbalancers, High availabilty, Cloudflare, Backblaze, AWS, Percona MySQL)<br>
     • Sophos firewall administration<br>
     • Management of SAAS LDAP services with Jumpcloud<br>
     • Scriping with Bash and other tools (Ansible, Cronicle, etc)<br>
