@@ -1,9 +1,30 @@
-
 - layout: left
   company: Pagefreezer, BC, Canada
   link: http://pagefreezer.com
-  job_title: IT Engineer and Infrastucture Engineer
-  dates: 2021 - Present
+  job_title: Infrastructure Engineer
+  dates: 2022 - Present
+  description: | # this will include new lines to allow paragraphs
+    <b>Key Achievements</b><br>
+    •	Implement, maintain and monitor all web envirnments<br>
+    •	Administer bare-metal and virualized infrastrucure<br>
+    •	Improve, enhance and automate<br><br>
+    <b>Responsibilties</b><br>
+    • Duties include management of IT infrastructure.<br>
+    • Administer virtualized Proxmox enviroment<br>
+    • Linux (Linux Server) administration - Installation, configuration, automation<br>
+    • AWS administration<br>
+    • Maintain, update and secure web enviroment (Nginx, Tomcat, Loadbalancers, High availabilty, Cloudflare, Backblaze, AWS)<br>
+    • Sophos firewall administration<br>
+    • Management of SAAS LDAP services with Jumpcloud<br>
+    • Scriping with Bash and other tools (Ansible, Cronicle, etc)<br>
+    • Monitoring with Zabbix, Prometheus, Grafana and ELK<br>
+    • Ticketing and documentation (Jira and Confluence)
+      
+- layout: left
+  company: Pagefreezer, BC, Canada
+  link: http://pagefreezer.com
+  job_title: IT Engineer
+  dates: 2021 - 2022
   description: | # this will include new lines to allow paragraphs
     <b>Key Achievements</b><br>
     •	Established controls for macOS deployment and documentation<br>
@@ -16,15 +37,18 @@
     • Complete management of Apple (and Linux servers as well as some Windows) devices in production as well as in test labs.<br>
     • Administration of MDMs and all other device system administration tools (Patch management, configurations and troubleshooting)<br>
     • Management of SAAS LDAP services with Jumpcloud<br>
+    • Google workspace admin<br>
     • Bash scripting for automation in macOS and Linux<br>
     • Asset Management<br>
+    • Backup management<br>
     • Other infrastructure duties include:<br>
-      Webserver administratrion<br>
-      Support for engineering teams with Linux servers and user devices<br>
-      Virtual infrastructure management<br>
-      Firewall Administration<br>
-      End-point protection (Sophos) deployment and support
-
+    • Webserver administratrion<br>
+    • Support for engineering teams with Linux servers and user devices<br>
+    • Virtual infrastructure management<br>
+    • Firewall Administration<br>
+    • End-point protection (Sophos) deployment and support
+    • Security administration for security tools (SecurityScore card and BitSight)
+    
 - layout: left
   company: Digicape, Cape Town, South Africa
   link: https://www.digicape.co.za
@@ -41,6 +65,7 @@
     •	Providing key support for Apple devices, servers, software and peripherals for single users, organisations and schools<br>
     •	Integrating Macs and PCs in small, medium and large networks and organisations<br>
     •	Maintaining and troubleshooting propriety and open-source software in the management of all Apple products<br>
+    • Microsoft Azure administration, AD and LDAP<br>
     •	Implementing and managing storage solutions such as RAID and NAS/SAN<br>
     •	Handling infrastructure automation, bash scripting, and centralising the deployment and management of all Apple devices via various methods, including MDM and patch management<br>
     •	Working with Apache web servers, Cloud solutions and network services<br>
