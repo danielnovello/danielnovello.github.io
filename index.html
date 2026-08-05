@@ -98,6 +98,7 @@
         .body {
             display: grid;
             grid-template-columns: 260px 1fr;
+            align-items: start;
         }
 
         /* ── Sidebar ── */
@@ -105,6 +106,7 @@
             background: var(--bg-sidebar);
             border-right: 1px solid var(--border);
             padding: 36px 28px;
+            min-height: 100%;
         }
 
         .sidebar-section {
@@ -121,6 +123,8 @@
             letter-spacing: 0.1em;
             text-transform: uppercase;
             color: var(--text-secondary);
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border);
             margin-bottom: 14px;
         }
 
