@@ -3,726 +3,426 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Daniel John Novello - Senior Cloud Infrastructure Engineer specializing in Kubernetes, AWS, and DevOps">
-    <meta name="author" content="Daniel John Novello">
-    <title>Daniel Novello - Senior Cloud Infrastructure Engineer</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta name="description" content="Daniel-John Novello - Senior Cloud Infrastructure Engineer specializing in Kubernetes, AWS, and DevOps">
+    <meta name="author" content="Daniel-John Novello">
+    <title>Daniel-John Novello — Senior Cloud Infrastructure Engineer</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        * {
+        *, *::before, *::after {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
         :root {
-            --primary: #0A66C2;
-            --primary-dark: #004182;
-            --secondary: #00D9FF;
-            --accent: #FF6B35;
-            --dark: #1a1a2e;
-            --darker: #0f0f1e;
-            --text: #e0e0e0;
-            --text-muted: #a0a0a0;
-            --card-bg: #16213e;
-            --card-hover: #1e2e4f;
-            --success: #10b981;
-            --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            --gradient-2: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            --gradient-3: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-            --gradient-primary: linear-gradient(135deg, #0A66C2 0%, #00D9FF 100%);
+            --accent: #1d4ed8;
+            --accent-light: #eff6ff;
+            --text: #111827;
+            --text-secondary: #6b7280;
+            --border: #e5e7eb;
+            --bg: #ffffff;
+            --bg-sidebar: #f9fafb;
+            --success: #16a34a;
         }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: var(--darker);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--bg);
             color: var(--text);
-            line-height: 1.7;
-            overflow-x: hidden;
+            line-height: 1.6;
+            font-size: 15px;
         }
 
-        .background-animation {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            background: var(--darker);
-            overflow: hidden;
-        }
-
-        .background-animation::before {
-            content: '';
-            position: absolute;
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, rgba(10, 102, 194, 0.1) 0%, transparent 70%);
-            border-radius: 50%;
-            top: -200px;
-            left: -200px;
-            animation: float 20s infinite ease-in-out;
-        }
-
-        .background-animation::after {
-            content: '';
-            position: absolute;
-            width: 400px;
-            height: 400px;
-            background: radial-gradient(circle, rgba(0, 217, 255, 0.08) 0%, transparent 70%);
-            border-radius: 50%;
-            bottom: -150px;
-            right: -150px;
-            animation: float 15s infinite ease-in-out reverse;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translate(0, 0) scale(1); }
-            33% { transform: translate(100px, -50px) scale(1.1); }
-            66% { transform: translate(-50px, 100px) scale(0.9); }
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 60px 30px;
-            position: relative;
-        }
-
-        header {
-            text-align: center;
-            margin-bottom: 60px;
-            animation: fadeInDown 0.8s ease-out;
-        }
-
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        .hero {
-            position: relative;
-            padding: 40px;
-            background: linear-gradient(135deg, rgba(10, 102, 194, 0.1) 0%, rgba(0, 217, 255, 0.05) 100%);
-            border-radius: 30px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            margin-bottom: 40px;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: var(--gradient-primary);
-            border-radius: 30px;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            z-index: -1;
-        }
-
-        h1 {
-            font-size: 4em;
-            font-weight: 700;
-            background: var(--gradient-primary);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 15px;
-            letter-spacing: -2px;
-        }
-
-        .title {
-            font-size: 1.8em;
-            color: var(--secondary);
-            margin-bottom: 25px;
-            font-weight: 500;
-        }
-
-        .contact-links {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            flex-wrap: wrap;
-            margin-top: 30px;
-        }
-
-        .contact-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 12px 24px;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 50px;
-            color: var(--text);
+        a {
+            color: var(--accent);
             text-decoration: none;
-            transition: all 0.3s ease;
-            font-size: 0.95em;
         }
 
-        .contact-link:hover {
-            background: rgba(10, 102, 194, 0.2);
-            border-color: var(--primary);
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(10, 102, 194, 0.3);
+        a:hover {
+            text-decoration: underline;
         }
 
-        .contact-link i {
-            font-size: 1.1em;
-            color: var(--secondary);
+        /* ── Layout ── */
+        .page {
+            max-width: 1080px;
+            margin: 0 auto;
+            min-height: 100vh;
         }
 
-        .content-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 30px;
-            animation: fadeInUp 0.8s ease-out 0.2s both;
+        .header {
+            padding: 48px 48px 36px;
+            border-bottom: 1px solid var(--border);
         }
 
-        .card {
-            background: var(--card-bg);
-            border-radius: 20px;
-            padding: 35px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 3px;
-            background: var(--gradient-primary);
-            transition: left 0.5s ease;
-        }
-
-        .card:hover::before {
-            left: 0;
-        }
-
-        .card:hover {
-            border-color: rgba(10, 102, 194, 0.3);
-            transform: translateY(-5px);
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-        }
-
-        h2 {
-            font-size: 2em;
-            margin-bottom: 25px;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            font-weight: 600;
+        .header-name {
+            font-size: 2.2rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
             color: var(--text);
+            margin-bottom: 4px;
         }
 
-        h2 i {
-            font-size: 0.9em;
-            color: var(--secondary);
-            width: 45px;
-            height: 45px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: rgba(0, 217, 255, 0.1);
-            border-radius: 12px;
+        .header-title {
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            font-weight: 400;
+            margin-bottom: 20px;
         }
 
-        .summary-text {
-            font-size: 1.1em;
-            line-height: 1.9;
-            color: var(--text-muted);
-        }
-
-        .skills-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-        }
-
-        .skill-group {
-            background: rgba(255, 255, 255, 0.02);
-            padding: 20px;
-            border-radius: 15px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            transition: all 0.3s ease;
-        }
-
-        .skill-group:hover {
-            background: rgba(10, 102, 194, 0.05);
-            border-color: rgba(10, 102, 194, 0.3);
-            transform: translateX(5px);
-        }
-
-        .skill-title {
-            font-weight: 600;
-            color: var(--secondary);
-            margin-bottom: 12px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 1.05em;
-        }
-
-        .skill-title i {
-            font-size: 1.2em;
-        }
-
-        .skill-tags {
+        .header-meta {
             display: flex;
             flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        .skill-tag {
-            padding: 6px 14px;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            font-size: 0.85em;
-            color: var(--text);
-            transition: all 0.3s ease;
-        }
-
-        .skill-tag:hover {
-            background: var(--primary);
-            border-color: var(--primary);
-            transform: scale(1.05);
-        }
-
-        .experience-item {
-            margin-bottom: 35px;
-            padding-bottom: 35px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-            position: relative;
-            padding-left: 30px;
-        }
-
-        .experience-item::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 8px;
-            width: 12px;
-            height: 12px;
-            background: var(--secondary);
-            border-radius: 50%;
-            box-shadow: 0 0 20px var(--secondary);
-        }
-
-        .experience-item:last-child {
-            border-bottom: none;
-            padding-bottom: 0;
-        }
-
-        .job-header {
-            margin-bottom: 15px;
-        }
-
-        .job-title {
-            font-size: 1.4em;
-            font-weight: 600;
-            color: var(--text);
-            margin-bottom: 8px;
-        }
-
-        .company {
-            color: var(--secondary);
-            font-weight: 600;
-        }
-
-        .job-meta {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            color: var(--text-muted);
-            font-size: 0.95em;
-            margin-top: 8px;
-        }
-
-        .job-meta i {
-            color: var(--secondary);
-        }
-
-        .achievements {
-            list-style: none;
-            margin-top: 15px;
-        }
-
-        .achievements li {
-            padding-left: 30px;
-            margin-bottom: 12px;
-            position: relative;
-            color: var(--text-muted);
-            line-height: 1.7;
-        }
-
-        .achievements li::before {
-            content: "▹";
-            position: absolute;
-            left: 0;
-            color: var(--secondary);
-            font-size: 1.5em;
-            line-height: 1.2;
-        }
-
-        .certifications-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 15px;
-        }
-
-        .cert-item {
-            padding: 18px 22px;
-            background: rgba(16, 185, 129, 0.05);
-            border: 1px solid rgba(16, 185, 129, 0.2);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            transition: all 0.3s ease;
-        }
-
-        .cert-item:hover {
-            background: rgba(16, 185, 129, 0.1);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(16, 185, 129, 0.2);
-        }
-
-        .cert-item i {
-            color: var(--success);
-            font-size: 1.3em;
-        }
-
-        .cert-item span {
-            color: var(--text);
-            font-size: 0.95em;
-        }
-
-        .education-item {
-            display: flex;
-            align-items: center;
             gap: 20px;
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.02);
-            border-radius: 15px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            font-size: 0.875rem;
+            color: var(--text-secondary);
         }
 
-        .education-icon {
-            width: 60px;
-            height: 60px;
-            background: var(--gradient-primary);
-            border-radius: 15px;
+        .header-meta a {
+            color: var(--text-secondary);
             display: flex;
             align-items: center;
-            justify-content: center;
-            font-size: 1.8em;
-            color: white;
+            gap: 5px;
+        }
+
+        .header-meta a:hover {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .meta-icon {
+            width: 14px;
+            height: 14px;
             flex-shrink: 0;
         }
 
-        .education-content h3 {
+        .body {
+            display: grid;
+            grid-template-columns: 260px 1fr;
+        }
+
+        /* ── Sidebar ── */
+        .sidebar {
+            background: var(--bg-sidebar);
+            border-right: 1px solid var(--border);
+            padding: 36px 28px;
+        }
+
+        .sidebar-section {
+            margin-bottom: 36px;
+        }
+
+        .sidebar-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .sidebar-heading {
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--text-secondary);
+            margin-bottom: 14px;
+        }
+
+        .skill-group {
+            margin-bottom: 16px;
+        }
+
+        .skill-group-name {
+            font-size: 0.8rem;
+            font-weight: 600;
             color: var(--text);
-            font-size: 1.2em;
             margin-bottom: 5px;
         }
 
-        .education-content p {
-            color: var(--text-muted);
-            font-size: 0.95em;
+        .skill-list {
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
         }
 
-        footer {
-            text-align: center;
-            margin-top: 60px;
-            padding-top: 30px;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-            color: var(--text-muted);
-            font-size: 0.9em;
+        .cert-list {
+            list-style: none;
         }
 
-        .scroll-top {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 50px;
-            height: 50px;
-            background: var(--gradient-primary);
-            border-radius: 50%;
+        .cert-list li {
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+            padding: 5px 0;
+            border-bottom: 1px solid var(--border);
+            line-height: 1.4;
+        }
+
+        .cert-list li:last-child {
+            border-bottom: none;
+        }
+
+        .cert-highlight {
+            color: var(--text);
+            font-weight: 500;
+        }
+
+        .edu-degree {
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--text);
+            margin-bottom: 3px;
+        }
+
+        .edu-school {
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+        }
+
+        /* ── Main ── */
+        .main {
+            padding: 36px 48px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section:last-child {
+            margin-bottom: 0;
+        }
+
+        .section-heading {
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .summary {
+            font-size: 0.92rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+
+        /* ── Experience ── */
+        .exp-item {
+            margin-bottom: 32px;
+        }
+
+        .exp-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .exp-header {
             display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            cursor: pointer;
-            opacity: 0;
-            transition: all 0.3s ease;
-            box-shadow: 0 10px 30px rgba(10, 102, 194, 0.3);
-            z-index: 1000;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 2px;
         }
 
-        .scroll-top.visible {
-            opacity: 1;
+        .exp-title {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text);
         }
 
-        .scroll-top:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(10, 102, 194, 0.5);
+        .exp-dates {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            white-space: nowrap;
         }
 
-        @media (max-width: 768px) {
-            .container {
-                padding: 30px 20px;
-            }
-
-            h1 {
-                font-size: 2.5em;
-            }
-
-            .title {
-                font-size: 1.3em;
-            }
-
-            .contact-links {
-                flex-direction: column;
-                gap: 12px;
-            }
-
-            h2 {
-                font-size: 1.5em;
-            }
-
-            .card {
-                padding: 25px;
-            }
-
-            .skills-container {
-                grid-template-columns: 1fr;
-            }
-
-            .certifications-grid {
-                grid-template-columns: 1fr;
-            }
+        .exp-company {
+            font-size: 0.85rem;
+            color: var(--accent);
+            font-weight: 500;
+            margin-bottom: 10px;
         }
 
+        .exp-location {
+            color: var(--text-secondary);
+            font-weight: 400;
+        }
+
+        .exp-bullets {
+            list-style: none;
+            padding: 0;
+        }
+
+        .exp-bullets li {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            padding-left: 16px;
+            margin-bottom: 7px;
+            position: relative;
+            line-height: 1.65;
+        }
+
+        .exp-bullets li::before {
+            content: "–";
+            position: absolute;
+            left: 0;
+            color: var(--border);
+            font-weight: 400;
+        }
+
+        /* ── Print ── */
         @media print {
-            body {
-                background: white;
-                color: #333;
+            body { font-size: 13px; }
+            .page { max-width: 100%; }
+            .header { padding: 24px 32px 20px; }
+            .main { padding: 24px 32px; }
+            .sidebar { padding: 24px 20px; }
+            .body { grid-template-columns: 220px 1fr; }
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 768px) {
+            .body {
+                grid-template-columns: 1fr;
             }
 
-            .background-animation,
-            .scroll-top {
-                display: none;
+            .sidebar {
+                border-right: none;
+                border-bottom: 1px solid var(--border);
             }
 
-            .card {
-                border: 1px solid #ddd;
-                background: white;
-                color: #333;
-                box-shadow: none;
-                page-break-inside: avoid;
+            .header {
+                padding: 32px 24px 24px;
             }
 
-            h1, h2, .company, .title {
-                color: #0A66C2;
+            .main {
+                padding: 28px 24px;
             }
 
-            .skill-tag, .cert-item {
-                border-color: #ddd;
+            .sidebar {
+                padding: 28px 24px;
+            }
+
+            .header-name {
+                font-size: 1.8rem;
             }
         }
     </style>
 </head>
 <body>
-    <div class="background-animation"></div>
+<div class="page">
 
-    <div class="container">
-        <header>
-            <div class="hero">
-                <h1>DANIEL NOVELLO</h1>
-                <div class="title">Senior Cloud Infrastructure Engineer</div>
-                <div class="contact-links">
-                    <a href="mailto:djquazzi@gmail.com" class="contact-link">
-                        <i class="fas fa-envelope"></i>
-                        djquazzi@gmail.com
-                    </a>
-                    <a href="tel:+1778903****" class="contact-link">
-                        <i class="fas fa-phone"></i>
-                        (778) 903-****
-                    </a>
-                    <a href="https://linkedin.com/in/daniel-novello" target="_blank" rel="noopener" class="contact-link">
-                        <i class="fab fa-linkedin"></i>
-                        LinkedIn
-                    </a>
-                    <a href="https://github.com/danielnovello" target="_blank" rel="noopener" class="contact-link">
-                        <i class="fab fa-github"></i>
-                        GitHub
-                    </a>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-name">Daniel-John Novello</div>
+        <div class="header-title">Senior Cloud Infrastructure Engineer &nbsp;·&nbsp; Vancouver, Canada</div>
+        <div class="header-meta">
+            <a href="mailto:djquazzi@gmail.com">
+                <svg class="meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
+                djquazzi@gmail.com
+            </a>
+            <a href="tel:+17789032435">
+                <svg class="meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.28h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6 6l1.06-1.06a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 16z"/></svg>
+                (778) 903-2435
+            </a>
+            <a href="https://linkedin.com/in/daniel-novello" target="_blank" rel="noopener">
+                <svg class="meta-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                linkedin.com/in/daniel-novello
+            </a>
+            <a href="https://danielnovello.github.io" target="_blank" rel="noopener">
+                <svg class="meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                danielnovello.github.io
+            </a>
+        </div>
+    </header>
+
+    <div class="body">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <div class="sidebar-section">
+                <div class="sidebar-heading">Skills</div>
+
+                <div class="skill-group">
+                    <div class="skill-group-name">Containers &amp; Orchestration</div>
+                    <div class="skill-list">Kubernetes (EKS), Helm, ArgoCD, multi-tenant clusters</div>
+                </div>
+
+                <div class="skill-group">
+                    <div class="skill-group-name">Cloud — AWS</div>
+                    <div class="skill-list">EKS, EC2, ECS, S3, RDS, IAM, Lambda, SQS, Route53, CloudFront</div>
+                </div>
+
+                <div class="skill-group">
+                    <div class="skill-group-name">IaC &amp; Automation</div>
+                    <div class="skill-list">Terraform, Ansible, Helm, Bash, GitHub Actions</div>
+                </div>
+
+                <div class="skill-group">
+                    <div class="skill-group-name">AI Platform</div>
+                    <div class="skill-list">AWS Bedrock, IAM governance, model access controls, usage quotas, cost guardrails</div>
+                </div>
+
+                <div class="skill-group">
+                    <div class="skill-group-name">Observability</div>
+                    <div class="skill-list">Prometheus, Grafana, ELK Stack, CloudWatch</div>
+                </div>
+
+                <div class="skill-group">
+                    <div class="skill-group-name">Systems</div>
+                    <div class="skill-list">Linux (15+ yrs), networking, performance tuning, shell scripting</div>
+                </div>
+
+                <div class="skill-group">
+                    <div class="skill-group-name">Security &amp; Cost</div>
+                    <div class="skill-list">IAM least-privilege, DevSecOps, FinOps</div>
                 </div>
             </div>
-        </header>
 
-        <div class="content-grid">
-            <div class="card">
-                <h2><i class="fas fa-user-circle"></i> About Me</h2>
-                <p class="summary-text">
-                    DevOps & Cloud Infrastructure Engineer with 15+ years of experience building and operating Linux-based distributed systems
+            <div class="sidebar-section">
+                <div class="sidebar-heading">Certifications</div>
+                <ul class="cert-list">
+                    <li><span class="cert-highlight">AWS Solutions Architect</span> – Professional</li>
+                    <li><span class="cert-highlight">AWS SysOps Administrator</span> – Associate</li>
+                    <li><span class="cert-highlight">AWS Cloud Practitioner</span></li>
+                    <li><span class="cert-highlight">Certified ScrumMaster®</span></li>
+                    <li><span class="cert-highlight">Cisco CCENT</span></li>
+                    <li><span class="cert-highlight">Jamf 200</span></li>
+                    <li><span class="cert-highlight">Apple ACTC</span></li>
+                    <li><span class="cert-highlight">MikroTik MTCNA, MTCRE</span></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <div class="sidebar-heading">Education</div>
+                <div class="edu-degree">Diploma — Systems &amp; PC Engineering</div>
+                <div class="edu-school">Damelin, South Africa</div>
+            </div>
+
+        </aside>
+
+        <!-- Main content -->
+        <main class="main">
+
+            <section class="section">
+                <div class="section-heading">Summary</div>
+                <p class="summary">
+                    DevOps &amp; Cloud Infrastructure Engineer with 15+ years of experience building and operating Linux-based distributed systems
                     and Kubernetes platforms at scale. Expert in Kubernetes (EKS), platform engineering, GitOps, and Infrastructure as Code,
                     with a strong focus on reliability, scalability, and developer productivity. Proven track record delivering multi-tenant
                     Kubernetes platforms, cloud migrations, cost-optimized AWS architectures, and AI platform governance on AWS Bedrock.
                 </p>
-            </div>
+            </section>
 
-            <div class="card">
-                <h2><i class="fas fa-code"></i> Technical Skills</h2>
-                <div class="skills-container">
-                    <div class="skill-group">
-                        <div class="skill-title">
-                            <i class="fas fa-dharmachakra"></i>
-                            Kubernetes & Containers
-                        </div>
-                        <div class="skill-tags">
-                            <span class="skill-tag">Kubernetes</span>
-                            <span class="skill-tag">EKS</span>
-                            <span class="skill-tag">Helm</span>
-                            <span class="skill-tag">ArgoCD</span>
-                            <span class="skill-tag">Docker</span>
-                            <span class="skill-tag">Multi-tenant</span>
-                        </div>
+            <section class="section">
+                <div class="section-heading">Experience</div>
+
+                <div class="exp-item">
+                    <div class="exp-header">
+                        <div class="exp-title">Senior Cloud Infrastructure Engineer</div>
+                        <div class="exp-dates">Sept 2022 – Present</div>
                     </div>
-
-                    <div class="skill-group">
-                        <div class="skill-title">
-                            <i class="fab fa-aws"></i>
-                            Cloud & AWS
-                        </div>
-                        <div class="skill-tags">
-                            <span class="skill-tag">EKS</span>
-                            <span class="skill-tag">EC2</span>
-                            <span class="skill-tag">ECS</span>
-                            <span class="skill-tag">S3</span>
-                            <span class="skill-tag">RDS</span>
-                            <span class="skill-tag">IAM</span>
-                            <span class="skill-tag">Lambda</span>
-                            <span class="skill-tag">Route53</span>
-                            <span class="skill-tag">CloudFront</span>
-                            <span class="skill-tag">VPC</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-group">
-                        <div class="skill-title">
-                            <i class="fas fa-cogs"></i>
-                            IaC & Automation
-                        </div>
-                        <div class="skill-tags">
-                            <span class="skill-tag">Terraform</span>
-                            <span class="skill-tag">Ansible</span>
-                            <span class="skill-tag">Helm</span>
-                            <span class="skill-tag">Bash</span>
-                            <span class="skill-tag">GitHub Actions</span>
-                            <span class="skill-tag">CI/CD</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-group">
-                        <div class="skill-title">
-                            <i class="fas fa-robot"></i>
-                            AI Platform
-                        </div>
-                        <div class="skill-tags">
-                            <span class="skill-tag">AWS Bedrock</span>
-                            <span class="skill-tag">IAM Governance</span>
-                            <span class="skill-tag">Model Access Controls</span>
-                            <span class="skill-tag">Usage Quotas</span>
-                            <span class="skill-tag">Cost Guardrails</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-group">
-                        <div class="skill-title">
-                            <i class="fab fa-linux"></i>
-                            Linux & Systems
-                        </div>
-                        <div class="skill-tags">
-                            <span class="skill-tag">Linux (15+ yrs)</span>
-                            <span class="skill-tag">Networking</span>
-                            <span class="skill-tag">Performance Tuning</span>
-                            <span class="skill-tag">Shell Scripting</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-group">
-                        <div class="skill-title">
-                            <i class="fas fa-chart-line"></i>
-                            Observability
-                        </div>
-                        <div class="skill-tags">
-                            <span class="skill-tag">Prometheus</span>
-                            <span class="skill-tag">Grafana</span>
-                            <span class="skill-tag">ELK Stack</span>
-                            <span class="skill-tag">CloudWatch</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-group">
-                        <div class="skill-title">
-                            <i class="fas fa-shield-alt"></i>
-                            Security & Cost
-                        </div>
-                        <div class="skill-tags">
-                            <span class="skill-tag">IAM</span>
-                            <span class="skill-tag">DevSecOps</span>
-                            <span class="skill-tag">FinOps</span>
-                            <span class="skill-tag">Least Privilege</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card">
-                <h2><i class="fas fa-briefcase"></i> Professional Experience</h2>
-
-                <div class="experience-item">
-                    <div class="job-header">
-                        <div class="job-title">Senior Cloud Infrastructure Engineer → <span class="company">Pagefreezer</span></div>
-                        <div class="job-meta">
-                            <span><i class="fas fa-map-marker-alt"></i> Vancouver, Canada</span>
-                            <span><i class="fas fa-calendar"></i> Sept 2022 – Present</span>
-                        </div>
-                    </div>
-                    <ul class="achievements">
+                    <div class="exp-company">Pagefreezer &nbsp;<span class="exp-location">· Vancouver, Canada</span></div>
+                    <ul class="exp-bullets">
                         <li>Deployed AWS Bedrock governance controls including IAM model access policies, usage quotas, and cost guardrails, enabling safe and auditable AI model access across engineering teams</li>
                         <li>Architected and operated a multi-tenant Kubernetes (EKS) platform supporting scalable, secure workloads across development, staging, and production environments</li>
                         <li>Built GitOps CI/CD pipelines (GitHub Actions + ArgoCD) reducing deployment cycle time and enabling fully auditable, automated releases</li>
@@ -733,15 +433,13 @@
                     </ul>
                 </div>
 
-                <div class="experience-item">
-                    <div class="job-header">
-                        <div class="job-title">Infrastructure Engineer → <span class="company">Pagefreezer</span></div>
-                        <div class="job-meta">
-                            <span><i class="fas fa-map-marker-alt"></i> Vancouver, Canada</span>
-                            <span><i class="fas fa-calendar"></i> Apr 2022 – Sept 2022</span>
-                        </div>
+                <div class="exp-item">
+                    <div class="exp-header">
+                        <div class="exp-title">Infrastructure Engineer</div>
+                        <div class="exp-dates">Apr 2022 – Sept 2022</div>
                     </div>
-                    <ul class="achievements">
+                    <div class="exp-company">Pagefreezer &nbsp;<span class="exp-location">· Vancouver, Canada</span></div>
+                    <ul class="exp-bullets">
                         <li>Managed Linux-based production systems (MySQL, Nginx, Tomcat) ensuring high availability</li>
                         <li>Designed and maintained AWS + hybrid networking (VPNs, firewalls)</li>
                         <li>Operated distributed storage systems (Ceph + cloud storage)</li>
@@ -749,139 +447,37 @@
                     </ul>
                 </div>
 
-                <div class="experience-item">
-                    <div class="job-header">
-                        <div class="job-title">IT Engineer → <span class="company">Pagefreezer</span></div>
-                        <div class="job-meta">
-                            <span><i class="fas fa-map-marker-alt"></i> Vancouver, Canada</span>
-                            <span><i class="fas fa-calendar"></i> Apr 2021 – Apr 2022</span>
-                        </div>
+                <div class="exp-item">
+                    <div class="exp-header">
+                        <div class="exp-title">IT Engineer</div>
+                        <div class="exp-dates">Apr 2021 – Apr 2022</div>
                     </div>
-                    <ul class="achievements">
+                    <div class="exp-company">Pagefreezer &nbsp;<span class="exp-location">· Vancouver, Canada</span></div>
+                    <ul class="exp-bullets">
                         <li>Automated infrastructure and operations using Bash scripting and system tooling</li>
                         <li>Managed identity, access, and system security across environments</li>
                     </ul>
                 </div>
 
-                <div class="experience-item">
-                    <div class="job-header">
-                        <div class="job-title">Senior System Administrator → <span class="company">DigicapeSA</span></div>
-                        <div class="job-meta">
-                            <span><i class="fas fa-map-marker-alt"></i> Cape Town, South Africa</span>
-                            <span><i class="fas fa-calendar"></i> 2007 – 2021</span>
-                        </div>
+                <div class="exp-item">
+                    <div class="exp-header">
+                        <div class="exp-title">Senior System Administrator</div>
+                        <div class="exp-dates">2007 – 2021</div>
                     </div>
-                    <ul class="achievements">
+                    <div class="exp-company">DigicapeSA &nbsp;<span class="exp-location">· Cape Town, South Africa</span></div>
+                    <ul class="exp-bullets">
                         <li>Administered macOS, Linux, and Windows environments across a large enterprise network, supporting 500+ users and devices over 14 years</li>
                         <li>Designed and managed enterprise storage infrastructure (RAID, NAS, SAN) and automated operational workflows to reduce manual overhead</li>
                         <li>Implemented MDM (Jamf) and scripting automation for full device lifecycle management across a large mixed-platform fleet</li>
                         <li>Mentored junior engineers and drove process improvements that increased operational reliability and team efficiency</li>
                     </ul>
                 </div>
-            </div>
 
-            <div class="card">
-                <h2><i class="fas fa-certificate"></i> Certifications</h2>
-                <div class="certifications-grid">
-                    <div class="cert-item">
-                        <i class="fas fa-check-circle"></i>
-                        <span>AWS Solutions Architect – Professional</span>
-                    </div>
-                    <div class="cert-item">
-                        <i class="fas fa-check-circle"></i>
-                        <span>AWS SysOps Administrator</span>
-                    </div>
-                    <div class="cert-item">
-                        <i class="fas fa-check-circle"></i>
-                        <span>AWS Cloud Practitioner</span>
-                    </div>
-                    <div class="cert-item">
-                        <i class="fas fa-check-circle"></i>
-                        <span>Certified ScrumMaster®</span>
-                    </div>
-                    <div class="cert-item">
-                        <i class="fas fa-check-circle"></i>
-                        <span>Cisco CCENT</span>
-                    </div>
-                    <div class="cert-item">
-                        <i class="fas fa-check-circle"></i>
-                        <span>Jamf 200</span>
-                    </div>
-                    <div class="cert-item">
-                        <i class="fas fa-check-circle"></i>
-                        <span>Apple ACTC</span>
-                    </div>
-                    <div class="cert-item">
-                        <i class="fas fa-check-circle"></i>
-                        <span>MikroTik MTCNA, MTCRE</span>
-                    </div>
-                </div>
-            </div>
+            </section>
 
-            <div class="card">
-                <h2><i class="fas fa-graduation-cap"></i> Education</h2>
-                <div class="education-item">
-                    <div class="education-icon">
-                        <i class="fas fa-university"></i>
-                    </div>
-                    <div class="education-content">
-                        <h3>Diploma — Systems and PC Engineering</h3>
-                        <p>Damelin, South Africa</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <footer>
-            <p>Last updated: August 2026</p>
-            <p style="margin-top: 10px; opacity: 0.7;">Built with passion for cloud infrastructure and DevOps excellence</p>
-        </footer>
+        </main>
     </div>
 
-    <div class="scroll-top" id="scrollTop">
-        <i class="fas fa-arrow-up"></i>
-    </div>
-
-    <script>
-        // Smooth scroll to top
-        const scrollTop = document.getElementById('scrollTop');
-
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 300) {
-                scrollTop.classList.add('visible');
-            } else {
-                scrollTop.classList.remove('visible');
-            }
-        });
-
-        scrollTop.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-
-        // Add animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.card').forEach(card => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(20px)';
-            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(card);
-        });
-    </script>
+</div>
 </body>
 </html>
